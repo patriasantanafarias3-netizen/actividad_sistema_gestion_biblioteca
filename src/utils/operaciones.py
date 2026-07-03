@@ -16,15 +16,20 @@ def contar_libros(libros: list[Libro]):
 # Funciones que debes implementar
 def mostrar_disponibles(lista_libros: list[Libro]):
     """Muestra solo los libros que están disponibles"""
-    # Implementan la lógica aquí
+    for libro in lista_libros:
+        if libro["disponible"]== True:
+            print(libro["titulo"])
+
     pass
 
 def buscar_por_paginas(lista_libros: list[Libro], max_paginas: int):
     """Muestra libros con menos páginas que max_paginas"""
-    # Implementan la lógica aquí
+    for libro in lista_libros:
+        if libro["paginas"] < max_paginas:
+            print(libro["titulo"])
     pass
 
 def agregar_categoria(set_categorias: set[str], nueva_categoria: str):
     """Agrega una nueva categoría al set"""
-    # Implementan la lógica aquí
+    set_categorias.add(nueva_categoria)
     pass
